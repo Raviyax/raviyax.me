@@ -44,7 +44,7 @@ services:
       - app-network
     env_file: .env
     volumes:
-      - pma:/var/www/pma/html/
+      - pma:/var/www/html
     environment:
       PMA_HOST: db
       UPLOAD_LIMIT: 50M
@@ -61,7 +61,7 @@ services:
       - "443:443"
     volumes:
       - wordpress:/var/www/html
-      - pma:/var/www/pma/html/
+      - pma:/var/www/html/
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
     networks:
