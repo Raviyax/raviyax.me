@@ -58,7 +58,7 @@ services:
     volumes:
       - certbot-etc:/etc/letsencrypt
       - wordpress:/var/www/html
-    command: renew
+    command: certonly --webroot --webroot-path=/var/www/html --email sammy@ridehub.raviyax.me --agree-tos --no-eff-email --force-renewal -d ridehub.raviyax.me -d www.ridehub.raviyax.me 
 
 volumes:
   certbot-etc:
