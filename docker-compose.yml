@@ -58,7 +58,7 @@ services:
     volumes:
       - certbot-etc:/etc/letsencrypt
       - wordpress:/var/www/html
-    command: certonly --webroot --webroot-path=/var/www/html --email ravishan@raviyax.me --agree-tos --no-eff-email --force-renewal -d raviyax.me  -d www.raviyax.me
+    command: renew
 
 volumes:
   certbot-etc:
