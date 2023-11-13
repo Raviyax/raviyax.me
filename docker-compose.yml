@@ -34,6 +34,21 @@ services:
     networks:
       - app-network
 
+  phpmyadmin:
+    build: ./phpmyadmin
+    depends_on:
+      - db
+    container_name: phpmyadmin
+    restart: unless-stopped
+    networks:
+      - app-network
+    env_file: .env
+    volumes:
+      - pma:/var/www/pma/html/
+    environment:
+      PMA_HOST: db
+      UPLOAD_LIMIT: 50M
+
   webserver:
     depends_on:
       - wordpress
@@ -64,6 +79,7 @@ volumes:
   certbot-etc:
   wordpress:
   dbdata:
+  pma:
 
 
 networks:
