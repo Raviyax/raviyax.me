@@ -35,7 +35,7 @@ services:
       - app-network
 
   phpmyadmin:
-    build: ./phpmyadmin
+    build: phpmyadmin/phpmyadmin
     depends_on:
       - db
     container_name: phpmyadmin
@@ -51,6 +51,7 @@ services:
 
   webserver:
     depends_on:
+      - phpmyadmin
       - wordpress
     image: nginx:1.15.12-alpine
     container_name: webserver
@@ -60,6 +61,7 @@ services:
       - "443:443"
     volumes:
       - wordpress:/var/www/html
+      - pma:/var/www/pma/html/
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
     networks:
