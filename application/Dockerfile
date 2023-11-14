@@ -1,10 +1,8 @@
 FROM php:8.0.3-apache
-
-# Create directory
-RUN mkdir /var/iqube/html
-
-# Copy content to the correct directory
+RUN mkdir -p /var/iqube/html && \
+    chmod -R 777 /var/www/iqube/html/
 COPY iqube /var/iqube/html
 
-# Change permissions
-RUN chmod -R 777 /var/iqube/html
+
+
+
