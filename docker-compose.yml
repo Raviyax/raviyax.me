@@ -34,6 +34,20 @@ services:
     networks:
       - app-network
 
+  iqube:
+    depends_on:
+      - db
+    build: ./application
+    ports:
+      - '9000:9000'
+    container_name: iqube
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - iqube:/var/www/html
+    networks:
+      - app-network
+
   phpmyadmin:
     build: ./phpmyadmin
     depends_on:
@@ -62,6 +76,7 @@ services:
     volumes:
       - wordpress:/var/www/html
       - pma:/var/pma/html/
+      - iqube:/var/www/html
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
     networks:
