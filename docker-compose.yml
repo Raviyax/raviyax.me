@@ -90,7 +90,7 @@ services:
       - pma:/var/pma/html/
       - iqube:/var/iqube/html
     entrypoint: /bin/sh
-    command: -c 'certbot certonly --webroot --webroot-path=/var/ridehub/html -d ridehub.raviyax.me -d www.ridehub.raviyax.me && certbot certonly --webroot --webroot-path=/var/pma/html/ -d pma.raviyax.me -d www.pma.raviyax.me && certbot certonly --webroot --webroot-path=/var/iqube/html -d iqube.raviyax.me -d www.iqube.raviyax.me && nginx -s reload'
+    command: renew
 
 
 volumes:
