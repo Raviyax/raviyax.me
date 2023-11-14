@@ -89,7 +89,6 @@ services:
       - wordpress:/var/ridehub/html
       - pma:/var/pma/html/
       - iqube:/var/iqube/html
-    entrypoint: /bin/sh
     command: renew
 
 
