@@ -35,9 +35,10 @@ services:
       - app-network
 
   iqube:
+
+    build: ./application
     depends_on:
       - db
-    build: ./application
     ports:
       - '9000:9000'
     container_name: iqube
