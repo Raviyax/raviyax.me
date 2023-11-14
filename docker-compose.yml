@@ -68,11 +68,12 @@ services:
     depends_on:
       - phpmyadmin
       - wordpress
+      - iqube
     image: nginx:1.15.12-alpine
     container_name: webserver
     restart: unless-stopped
     ports:
-      - "8080:80"
+      - "80:80"
       - "443:443"
     volumes:
       - wordpress:/var/www/html
