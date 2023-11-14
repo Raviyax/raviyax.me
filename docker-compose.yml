@@ -99,7 +99,7 @@ volumes:
   wordpress:
   dbdata:
   pma:
-
+  iqube:
 
 networks:
   app-network:
