@@ -19,8 +19,6 @@ services:
     depends_on:
       - db
     image: wordpress:6.4.0-php8.1-fpm-alpine
-    ports:
-      - '9000:9000'
     container_name: wordpress
     restart: unless-stopped
     env_file: .env
