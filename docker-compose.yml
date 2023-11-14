@@ -33,7 +33,6 @@ services:
       - app-network
 
   iqube:
-
     build: ./application
     depends_on:
       - db
