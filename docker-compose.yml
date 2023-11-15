@@ -43,7 +43,7 @@ services:
     restart: unless-stopped
     env_file: .env
     volumes:
-      - ./src:/var/iqube/html/
+      - ./iqube:/var/iqube/html/
     networks:
       - app-network
 
@@ -76,7 +76,7 @@ services:
     volumes:
       - wordpress:/var/ridehub/html
       - pma:/var/pma/html/
-      - ./src:/var/iqube/html/
+      - ./iqube:/var/iqube/html/
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
     networks:
@@ -92,7 +92,7 @@ services:
       - certbot-etc:/etc/letsencrypt
       - wordpress:/var/ridehub/html
       - pma:/var/pma/html/
-      - ./src:/var/iqube/html/
+      - ./iqube:/var/iqube/html/
     command: renew
 
 
