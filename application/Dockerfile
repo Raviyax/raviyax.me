@@ -17,7 +17,7 @@ RUN chmod -R 777 /var/iqube
 WORKDIR /var/iqube/html
 
 # Expose port 80 for Apache
-EXPOSE 80
+EXPOSE 8080
 
 # Start Apache in the foreground
 CMD ["apache2-foreground"]
