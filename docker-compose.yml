@@ -46,7 +46,7 @@ services:
       - app-network
 
   pma:
-    image: phpmyadmin:5-fpm-alpine
+    build: ./pma
     depends_on:
       - db
     container_name: phpmyadmin
