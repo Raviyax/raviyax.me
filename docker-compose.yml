@@ -96,7 +96,6 @@ services:
       - ./iqube:/var/iqube/html/
     command: renew
 
-
 volumes:
   certbot-etc:
   wordpress:
