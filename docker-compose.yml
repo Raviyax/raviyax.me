@@ -49,7 +49,7 @@ services:
     build: ./pma
     depends_on:
       - db
-    container_name: phpmyadmin
+    container_name: pma
     restart: unless-stopped
     networks:
       - app-network
@@ -62,7 +62,7 @@ services:
 
   webserver:
     depends_on:
-      - phpmyadmin
+      - pma
       - wordpress
       - iqube
     image: nginx:1.15.12-alpine
