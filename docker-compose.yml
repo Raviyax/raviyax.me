@@ -78,7 +78,6 @@ services:
       - pma:/var/pma/html/
       - ./iqube:/var/iqube/html/
       - ./nginx-conf:/etc/nginx/conf.d
-      - certbot-etc:/etc/letsencrypt
     networks:
       - app-network
 
