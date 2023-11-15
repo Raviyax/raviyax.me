@@ -45,7 +45,7 @@ services:
     networks:
       - app-network
 
-  phpmyadmin:
+  pma:
     image: phpmyadmin:5-fpm-alpine
     depends_on:
       - db
@@ -55,7 +55,7 @@ services:
       - app-network
     env_file: .env
     volumes:
-      - pma:/var/www/html/
+      - pma:/var/pma/html/
     environment:
       PMA_HOST: db
       UPLOAD_LIMIT: 50M
@@ -73,7 +73,7 @@ services:
       - "443:443"
     volumes:
       - wordpress:/var/ridehub/html
-      - pma:/var/www/html/
+      - pma:/var/pma/html/
       - iqube:/var/iqube/html
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
