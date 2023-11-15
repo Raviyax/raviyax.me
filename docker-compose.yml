@@ -36,7 +36,7 @@ services:
 
 
   iqube:
-    build: ./iqube
+    build: ./app
     depends_on:
       - db
     container_name: iqube
