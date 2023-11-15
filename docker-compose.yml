@@ -33,8 +33,6 @@ services:
     networks:
       - app-network
 
-
-
   iqube:
     build: ./app
     depends_on:
@@ -44,6 +42,18 @@ services:
     env_file: .env
     volumes:
       - ./iqube:/var/iqube/html/
+    networks:
+      - app-network
+
+  medsupplyx:
+    build: ./app
+    depends_on:
+      - db
+    container_name: medsupplyx
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./medsupplyx:/var/medsupplyx/html/
     networks:
       - app-network
 
@@ -74,6 +84,7 @@ services:
       - "80:80"
     volumes:
       - wordpress:/var/ridehub/html
+      - ./medsupplyx:/var/medsupplyx/html/
       - pma:/var/pma/html/
       - ./iqube:/var/iqube/html/
       - ./nginx-conf:/etc/nginx/conf.d
@@ -90,7 +101,6 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile
     networks:
       - app-network
-
 
 volumes:
   wordpress:
