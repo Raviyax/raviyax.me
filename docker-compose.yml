@@ -82,22 +82,19 @@ services:
     networks:
       - app-network
 
-  certbot-renew:
-    depends_on:
-      - webserver
-      - iqube
-      - pma
-    image: certbot/certbot
-    container_name: certbot-renew
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - "443:443"
     volumes:
-      - certbot-etc:/etc/letsencrypt
-      - wordpress:/var/ridehub/html
-      - pma:/var/pma/html/
-      - ./iqube:/var/iqube/html/
-    command: renew
+      - ./Caddyfile:/etc/caddy/Caddyfile
+    networks:
+      - app-network
+
 
 volumes:
-  certbot-etc:
   wordpress:
   dbdata:
   pma:

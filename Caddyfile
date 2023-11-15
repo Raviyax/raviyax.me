@@ -1,0 +1,9 @@
+iqube.raviyax.me, ridehub.raviyax.me, pma.raviyax.me, www.iqube.raviyax.me, www.ridehub.raviyax.me, www.pma.raviyax.me {
+tls freshhackrip@gmail.com
+reverse_proxy webserver:80
+
+}
+
+
+
+
