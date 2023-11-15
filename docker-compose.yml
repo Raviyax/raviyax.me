@@ -33,15 +33,17 @@ services:
     networks:
       - app-network
 
-  iqube:
-    build: ./application
+
+
+  app:
+    build: ./app
     depends_on:
       - db
-    container_name: iqube
+    container_name: app
     restart: unless-stopped
     env_file: .env
     volumes:
-      - iqube:/var/iqube/html/public
+      - ./src:/var/iqube/html/
     networks:
       - app-network
 
