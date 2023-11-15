@@ -76,7 +76,7 @@ services:
     volumes:
       - wordpress:/var/ridehub/html
       - pma:/var/pma/html/
-      - iqube:/var/iqube/html/public
+      - ./src:/var/iqube/html/
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
     networks:
@@ -92,7 +92,7 @@ services:
       - certbot-etc:/etc/letsencrypt
       - wordpress:/var/ridehub/html
       - pma:/var/pma/html/
-      - iqube:/var/iqube/html/public
+      - ./src:/var/iqube/html/
     command: renew
 
 
