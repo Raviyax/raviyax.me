@@ -54,9 +54,8 @@ services:
     networks:
       - app-network
     env_file: .env
-    working_dir: /var/pma/html
     volumes:
-      - pma:/var/pma/html/
+      - pma:/var/www/html/
     environment:
       PMA_HOST: db
       UPLOAD_LIMIT: 50M
@@ -74,7 +73,7 @@ services:
       - "443:443"
     volumes:
       - wordpress:/var/ridehub/html
-      - pma:/var/pma/html/
+      - pma:/var/www/html/
       - iqube:/var/iqube/html
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
