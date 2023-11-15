@@ -35,11 +35,11 @@ services:
 
 
 
-  app:
-    build: ./app
+  iqube:
+    build: ./iqube
     depends_on:
       - db
-    container_name: app
+    container_name: iqube
     restart: unless-stopped
     env_file: .env
     volumes:
