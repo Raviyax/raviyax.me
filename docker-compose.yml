@@ -46,7 +46,7 @@ services:
       - app-network
 
   phpmyadmin:
-    build: ./phpmyadmin
+    build: phpmyadmin:latest
     depends_on:
       - db
     container_name: phpmyadmin
@@ -54,6 +54,7 @@ services:
     networks:
       - app-network
     env_file: .env
+    working_dir: /var/pma/html
     volumes:
       - pma:/var/pma/html/
     environment:
