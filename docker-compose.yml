@@ -46,7 +46,7 @@ services:
       - app-network
 
   phpmyadmin:
-    build: phpmyadmin:latest
+    build: phpmyadmin/phpmyadmin
     depends_on:
       - db
     container_name: phpmyadmin
