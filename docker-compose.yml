@@ -41,7 +41,7 @@ services:
     restart: unless-stopped
     env_file: .env
     volumes:
-      - ./iqube:/var/iqube/html/
+      - ../iqube:/var/iqube/html/
     networks:
       - app-network
 
@@ -53,7 +53,7 @@ services:
     restart: unless-stopped
     env_file: .env
     volumes:
-      - ./medsupplyx:/var/medsupplyx/html/
+      - ../medsupplyx:/var/medsupplyx/html/
     networks:
       - app-network
 
@@ -82,9 +82,9 @@ services:
     restart: unless-stopped
     volumes:
       - wordpress:/var/ridehub/html
-      - ./medsupplyx:/var/medsupplyx/html/
+      - ../medsupplyx:/var/medsupplyx/html/
       - pma:/var/pma/html/
-      - ./iqube:/var/iqube/html/
+      - ../iqube:/var/iqube/html/
       - ./nginx-conf:/etc/nginx/conf.d
     networks:
       - app-network
