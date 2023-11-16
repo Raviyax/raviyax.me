@@ -80,8 +80,6 @@ services:
     image: nginx:1.15.12-alpine
     container_name: webserver
     restart: unless-stopped
-    ports:
-      - "80:80"
     volumes:
       - wordpress:/var/ridehub/html
       - ./medsupplyx:/var/medsupplyx/html/
