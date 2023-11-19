@@ -4,20 +4,3 @@ reverse_proxy webserver:80
 
 }
 
-// iqube.raviyax.me, www.iqube.raviyax.me {
-// tls dewliyanage@gmail.com
-// reverse_proxy webserver:80
-
-// }
-
-// pma.raviyax.me, www.pma.raviyax.me {
-// tls nisalwishwajith@gmail.com
-// reverse_proxy webserver:80
-
-// }
-
-// www.medsupplyx.raviyax.me, medsupplyx.raviyax.me {
-// tls adilu@gmail.com
-// reverse_proxy webserver:80
-
-// }
