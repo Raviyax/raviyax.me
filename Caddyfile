@@ -1,4 +1,4 @@
-raviyax.me, www.raviyax.me {
+ridehub.duckdns.org, www.ridehub.duckdns.org {
 tls jayaperer@gmail.com
 reverse_proxy webserver:80
 
