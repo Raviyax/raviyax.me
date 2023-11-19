@@ -4,7 +4,7 @@ reverse_proxy webserver:80
 
 }
 
-ridehub.raviyax.me, www.ridehub.raviyax.me {
+raviyax.me, www.raviyax.me {
 tls jayaperer@gmail.com
 reverse_proxy webserver:80
 
