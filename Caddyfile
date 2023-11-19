@@ -1,5 +1,5 @@
 raviyax.me, www.raviyax.me {
-tls jayathilakeravishan@gmail.com
+tls freshhackrip@gmail.com
 reverse_proxy webserver:80
 
 }
@@ -7,8 +7,7 @@ reverse_proxy webserver:80
  www.medsupplyx.duckdns.org, medsupplyx.duckdns.org {
  tls wishwajithnisal@gmail.com
  reverse_proxy webserver:80
-}
-
+ }
 
 www.achchigeredda.duckdns.org, achchigeredda.duckdns.org {
  tls achchigeredda@gmail.com
@@ -19,6 +18,3 @@ www.ravishan.duckdns.org, ravishan.duckdns.org {
  tls achchigeredda@gmail.com
     reverse_proxy webserver:80
 }
-
-
-
