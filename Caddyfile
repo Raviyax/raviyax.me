@@ -1,5 +1,10 @@
 raviyax.me, www.raviyax.me {
 tls freshhackrip@gmail.com
+
+basicauth /wp-admin/* {
+	ravishan $2a$14$9vjWGM6EoMIpvb5Rg/7NjuAWf3.wKU0c2DruCPAE8I4ylWPSUy1oK
+}
+
 reverse_proxy webserver:80
 
 }
