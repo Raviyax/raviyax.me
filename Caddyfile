@@ -9,10 +9,16 @@ reverse_proxy webserver:80
  reverse_proxy webserver:80
  }
 
-www.achchigeredda.duckdns.org, achchigeredda.duckdns.org {
- tls achchigeredda@gmail.com
+achchigeredda.duckdns.org, www.achchigeredda.duckdns.org {
+    tls your_email@gmail.com
+
+    basicauth * {
+        ravishan $2a$14$9vjWGM6EoMIpvb5Rg/7NjuAWf3.wKU0c2DruCPAE8I4ylWPSUy1oK
+    }
+
     reverse_proxy webserver:80
 }
+
 
 www.ravishan.duckdns.org, ravishan.duckdns.org {
  tls achchigeredda@gmail.com
