@@ -29,3 +29,9 @@ www.ravishan.duckdns.org, ravishan.duckdns.org {
  tls achchigeredda@gmail.com
     reverse_proxy webserver:80
 }
+
+okura.raviyax.me, www.okura.raviyax.me {
+ tls madasha@gmail.com
+    reverse_proxy webserver:80
+}
+

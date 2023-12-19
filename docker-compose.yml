@@ -34,6 +34,24 @@ services:
     networks:
       - app-network
 
+  okura:
+    depends_on:
+      - db
+    image: wordpress:6.4.0-php8.1-fpm-alpine
+    container_name: okura
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - WORDPRESS_DB_HOST=db:3306
+      - WORDPRESS_DB_USER=root
+      - WORDPRESS_DB_PASSWORD=$MYSQL_PASSWORD
+      - WORDPRESS_DB_NAME=okura
+    working_dir: /var/okura/html
+    volumes:
+      - okura:/var/okura/html
+      - ../okura:/var/okura/html/wp-content/themes/okura
+    networks:
+      - app-network
       
 
   iqube:
@@ -84,6 +102,7 @@ services:
     container_name: webserver
     restart: unless-stopped
     volumes:
+      - okura:/var/okura/html
       - wordpress:/var/ridehub/html
       - ../medsupplyx:/var/medsupplyx/html/
       - pma:/var/pma/html/
