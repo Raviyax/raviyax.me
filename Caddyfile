@@ -1,8 +1,13 @@
+okurahotelservices.duckdns.org, www.okurahotelservices.duckdns.org {
+ tls okurahotelservices@gmail.com
+    reverse_proxy webserver:80
+}
+
 raviyax.me, www.raviyax.me {
 tls freshhackrip@gmail.com
 
 basicauth /wp-admin/* {
-	ravishan $2a$14$9vjWGM6EoMIpvb5Rg/7NjuAWf3.wKU0c2DruCPAE8I4ylWPSUy1oK
+    ravishan $2a$14$9vjWGM6EoMIpvb5Rg/7NjuAWf3.wKU0c2DruCPAE8I4ylWPSUy1oK
 }
 
 reverse_proxy webserver:80
@@ -30,8 +35,5 @@ www.ravishan.duckdns.org, ravishan.duckdns.org {
     reverse_proxy webserver:80
 }
 
-okurahotelservices.duckdns.org, www.okurahotelservices.duckdns.org {
- tls madasha@gmail.com
-    reverse_proxy webserver:80
-}
+
 
