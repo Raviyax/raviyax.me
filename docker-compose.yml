@@ -59,7 +59,7 @@ services:
       - ../okura:/var/okura/html/
     networks:
       - app-network
-    command: chmod -R 775 /var/okura/html/
+    
 
   medsupplyx:
     build: ./app
