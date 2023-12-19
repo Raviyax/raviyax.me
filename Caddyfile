@@ -5,8 +5,6 @@ okurahotelservices.duckdns.org, www.okurahotelservices.duckdns.org {
 
 raviyax.me, www.raviyax.me {
 tls freshhackrip@gmail.com
-
-
 reverse_proxy webserver:80
 
 }
