@@ -98,6 +98,7 @@ services:
       - pma
       - wordpress
       - iqube
+      - okura
     image: nginx:1.15.12-alpine
     container_name: webserver
     restart: unless-stopped
@@ -129,7 +130,7 @@ volumes:
   pma:
   iqube:
   okura:
-  
+
 
 
 networks:
