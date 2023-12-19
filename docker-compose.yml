@@ -128,6 +128,8 @@ volumes:
   dbdata:
   pma:
   iqube:
+  okura:
+  
 
 
 networks:
