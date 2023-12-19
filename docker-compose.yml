@@ -30,7 +30,7 @@ services:
     working_dir: /var/ridehub/html
     volumes:
       - wordpress:/var/ridehub/html
-      - ../okura:/var/okura/html/wp-content/themes/okura
+      - ../okura:/var/okura/html/wp-content/themes
     networks:
       - app-network
 
