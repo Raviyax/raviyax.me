@@ -1,6 +1,18 @@
 okurahotelservices.duckdns.org, www.okurahotelservices.duckdns.org {
- tls okurahotelservices@gmail.com
-    reverse_proxy webserver:80
+    root * /var/okura/html
+    encode gzip
+    file_server
+
+    php_fastcgi okura:9000 {
+        env PATH_INFO {path}
+    }
+
+    tls okura@gmail.com
+
+    @hiddenFiles {
+        path_regexp ^/(\\.ht|favicon\\.ico|robots\\.txt|.*\\.(css|gif|ico|jpeg|jpg|js|png))$
+    }
+    respond @hiddenFiles 404
 }
 
 raviyax.me, www.raviyax.me {
@@ -13,8 +25,6 @@ basicauth /wp-admin/* {
 reverse_proxy webserver:80
 
 }
-
-
 
  www.medsupplyx.duckdns.org, medsupplyx.duckdns.org {
  tls wishwajithnisal@gmail.com
@@ -31,11 +41,7 @@ achchigeredda.duckdns.org, www.achchigeredda.duckdns.org {
     reverse_proxy webserver:80
 }
 
-
 www.ravishan.duckdns.org, ravishan.duckdns.org {
  tls achchigeredda@gmail.com
     reverse_proxy webserver:80
 }
-
-
-
