@@ -49,7 +49,7 @@ services:
     working_dir: /var/okura/html
     volumes:
       - okura:/var/okura/html
-      - ../okura:/var/okura/html/wp-content/themes/okura
+
     networks:
       - app-network
       
