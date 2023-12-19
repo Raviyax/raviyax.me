@@ -1,3 +1,8 @@
+okurahotelservices.duckdns.org, www.okurahotelservices.duckdns.org {
+ tls okurahotelservices@gmail.com
+    reverse_proxy webserver:80
+}
+
 raviyax.me, www.raviyax.me {
 tls freshhackrip@gmail.com
 
@@ -9,10 +14,7 @@ reverse_proxy webserver:80
 
 }
 
-okurahotelservices.duckdns.org, www.okurahotelservices.duckdns.org {
- tls okurahotelservices@gmail.com
-    reverse_proxy webserver:80
-}
+
 
  www.medsupplyx.duckdns.org, medsupplyx.duckdns.org {
  tls wishwajithnisal@gmail.com
