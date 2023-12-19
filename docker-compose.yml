@@ -49,7 +49,6 @@ services:
     working_dir: /var/okura/html
     volumes:
       - okura:/var/okura/html
-
     networks:
       - app-network
       
