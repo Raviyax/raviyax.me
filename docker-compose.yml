@@ -49,7 +49,7 @@ services:
       - app-network
 
   okura:
-    build: ./app
+    build: ./okura
     depends_on:
       - db
     container_name: okura
