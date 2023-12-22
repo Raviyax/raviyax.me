@@ -33,9 +33,6 @@ services:
     networks:
       - app-network
 
-
-      
-
   iqube:
     build: ./app
     depends_on:
@@ -47,19 +44,6 @@ services:
       - ../iqube:/var/iqube/html/
     networks:
       - app-network
-
-  okura:
-    build: ./okura
-    depends_on:
-      - db
-    container_name: okura
-    restart: unless-stopped
-    env_file: .env
-    volumes:
-      - ../okura:/var/okura/html/
-    networks:
-      - app-network
-    
 
   medsupplyx:
     build: ./app
@@ -93,12 +77,12 @@ services:
       - pma
       - wordpress
       - iqube
-      - okura
+
     image: nginx:1.15.12-alpine
     container_name: webserver
     restart: unless-stopped
     volumes:
-      - ../okura:/var/okura/html/
+
       - wordpress:/var/ridehub/html
       - ../medsupplyx:/var/medsupplyx/html/
       - pma:/var/pma/html/
@@ -124,8 +108,7 @@ volumes:
   dbdata:
   pma:
   iqube:
-  okura:
-
+  medsupplyx:
 
 
 networks:
