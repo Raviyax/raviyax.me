@@ -19,7 +19,7 @@ achchigeredda.duckdns.org, www.achchigeredda.duckdns.org {
     reverse_proxy webserver:80
 }
 
-www.ravishan.duckdns.org, ravishan.duckdns.org {
+www.groupproject.duckdns.org, groupproject.duckdns.org {
  tls achchigeredda@gmail.com
     reverse_proxy webserver:80
 }
