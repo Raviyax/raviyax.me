@@ -1,16 +1,15 @@
 raviyax.me, www.raviyax.me {
-tls freshhackrip@gmail.com
-reverse_proxy webserver:80
-
+    tls your_email@gmail.com  # Replace with your actual email address
+    reverse_proxy webserver:80
 }
 
- www.medsupplyx.duckdns.org, medsupplyx.duckdns.org {
- tls wishwajithnisal@gmail.com
- reverse_proxy webserver:80
- }
+www.medsupplyx.duckdns.org, medsupplyx.duckdns.org {
+    tls wishwajithnisal@gmail.com  # Replace with your actual email address
+    reverse_proxy webserver:80
+}
 
 achchigeredda.duckdns.org, www.achchigeredda.duckdns.org {
-    tls your_email@gmail.com
+    tls your_email@gmail.com  # Replace with your actual email address
 
     basicauth * {
         ravishan $2a$14$9vjWGM6EoMIpvb5Rg/7NjuAWf3.wKU0c2DruCPAE8I4ylWPSUy1oK
@@ -19,7 +18,7 @@ achchigeredda.duckdns.org, www.achchigeredda.duckdns.org {
     reverse_proxy webserver:80
 }
 
-www.groupproject.duckdns.org, groupproject.duckdns.org {
- tls achchigeredda@gmail.com
+www.iqube.me, iqube.me {
+    tls iqube@gmail.com  # Replace with your actual email address
     reverse_proxy webserver:80
 }
