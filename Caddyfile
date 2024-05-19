@@ -22,3 +22,8 @@ www.iqube.me, iqube.me {
     tls iqube@gmail.com  # Replace with your actual email address
     reverse_proxy webserver:80
 }
+
+filmbalamu.duckdns.org, www.filmbalamu.duckdns.org{
+    tls seagwds@gmail.com
+    reverse_proxy jellyfin:8096
+}

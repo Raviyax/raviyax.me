@@ -1,7 +1,6 @@
 version: '3'
 
 services:
-
   db:
     image: mysql:latest
     container_name: db
@@ -35,30 +34,6 @@ services:
     networks:
       - app-network
 
-  iqube:
-    build: ./app
-    depends_on:
-      - db
-    container_name: iqube
-    restart: unless-stopped
-    env_file: .env
-    volumes:
-      - ../iqube:/var/iqube/html/
-    networks:
-      - app-network
-
-  medsupplyx:
-    build: ./app
-    depends_on:
-      - db
-    container_name: medsupplyx
-    restart: unless-stopped
-    env_file: .env
-    volumes:
-      - ../medsupplyx:/var/medsupplyx/html/
-    networks:
-      - app-network
-
   pma:
     build: ./pma
     depends_on:
@@ -78,17 +53,12 @@ services:
     depends_on:
       - pma
       - wordpress
-      - iqube
-
     image: nginx:1.15.12-alpine
     container_name: webserver
     restart: unless-stopped
     volumes:
-
       - wordpress:/var/ridehub/html
-      - ../medsupplyx:/var/medsupplyx/html/
-      - pma:/var/pma/html/
-      - ../iqube:/var/iqube/html/
+      - pma:/var/pma/html
       - ./nginx-conf:/etc/nginx/conf.d
     networks:
       - app-network
@@ -105,13 +75,23 @@ services:
     networks:
       - app-network
 
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    restart: unless-stopped
+    volumes:
+      -./jellyfin/config:/config
+      -./jellyfin/media:/media
+    ports:
+      - "8096:8096"
+      - "8920:8920"
+    networks:
+      - app-network
+
 volumes:
   wordpress:
   dbdata:
   pma:
-  iqube:
-  medsupplyx:
-
 
 networks:
   app-network:
