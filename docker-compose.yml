@@ -80,8 +80,8 @@ services:
     container_name: jellyfin
     restart: unless-stopped
     volumes:
-      -./jellyfin/config:/config
-      -./jellyfin/media:/media
+      - ./jellyfin/config:/config
+      - ./jellyfin/media:/media
     ports:
       - "8096:8096"
       - "8920:8920"
