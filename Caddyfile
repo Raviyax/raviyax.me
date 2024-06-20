@@ -12,3 +12,11 @@ achchigeredda.duckdns.org, www.achchigeredda.duckdns.org {
 
     reverse_proxy webserver:80
 }
+
+filmbalamu.duckdns.org, www.filmbalamu.duckdns.org{
+    tls dfshdfegdt@gmail.com
+
+    reverse_proxy filmbalamu:8096
+}
+
+
