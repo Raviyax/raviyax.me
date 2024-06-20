@@ -1,10 +1,10 @@
 raviyax.me, www.raviyax.me {
-    tls qwrwrretgd@gmail.com  
+    tls qwrwrretgd@gmail.com
     reverse_proxy webserver:80
 }
 
 achchigeredda.duckdns.org, www.achchigeredda.duckdns.org {
-    tls gkjkjoilk@gmail.com  
+    tls gkjkjoilk@gmail.com
 
     basicauth * {
         ravishan $2a$14$9vjWGM6EoMIpvb5Rg/7NjuAWf3.wKU0c2DruCPAE8I4ylWPSUy1oK
@@ -13,10 +13,7 @@ achchigeredda.duckdns.org, www.achchigeredda.duckdns.org {
     reverse_proxy webserver:80
 }
 
-filmbalamu.duckdns.org, www.filmbalamu.duckdns.org{
+filmbalamu.duckdns.org, www.filmbalamu.duckdns.org {
     tls dfshdfegdt@gmail.com
-
     reverse_proxy filmbalamu:8096
 }
-
-
