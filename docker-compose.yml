@@ -82,7 +82,7 @@ services:
       - ./jellyfin/config:/config
       - ./jellyfin/cache:/cache
       - type: bind
-        source: ./media
+        source: ../media
         target: /media
         read_only: true
     ports:
